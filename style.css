@@ -1,10 +1,4 @@
-<style>
 
-    /* ==========================================================
-       1. VARIABLES GLOBALES
-       Cambia colores, tamaño máximo del contenido y el espaciado
-       vertical entre secciones desde acá.
-    ========================================================== */
     :root{
       --bg: #070707;              /* fondo oscuro principal */
       --white: #f4f4f2;           /* texto claro */
