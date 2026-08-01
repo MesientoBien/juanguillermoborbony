@@ -390,73 +390,36 @@
     }
 
     .character-placeholder{
-  position:relative;
-  width:100%;
-  aspect-ratio:.88;
-  border-radius:clamp(24px,2.4vw,42px);
-  background:#20c866;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-  transform-origin:center center;
-  animation:characterCycle 2s ease-in-out infinite;
+    position:relative;
+    width:100%;
+    aspect-ratio:.88;
+    border-radius:clamp(24px,2.4vw,42px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:visible;
+
+    background:transparent;
 }
-@keyframes characterCycle{
-  /* COLOR 1 */
-  0%, 24.9%{
-    background:#20c866;
-    transform:rotate(0deg);
-  }
-  3%{ transform:rotate(-2deg); }
-  6%{ transform:rotate(2deg); }
-  9%{ transform:rotate(0deg); }
+    .character-img{
 
-  /* COLOR 2 */
-  25%, 49.9%{
-    background:#4ea8ff;
-    transform:rotate(0deg);
-  }
-  28%{ transform:rotate(-2deg); }
-  31%{ transform:rotate(2deg); }
-  34%{ transform:rotate(0deg); }
+    position:absolute;
 
-  /* COLOR 3 */
-  50%, 74.9%{
-    background:#ff7a00;
-    transform:rotate(0deg);
-  }
-  53%{ transform:rotate(-2deg); }
-  56%{ transform:rotate(2deg); }
-  59%{ transform:rotate(0deg); }
+    width:100%;
 
-  /* COLOR 4 */
-  75%, 100%{
-    background:#b36bff;
-    transform:rotate(0deg);
-  }
-  78%{ transform:rotate(-2deg); }
-  81%{ transform:rotate(2deg); }
-  84%{ transform:rotate(0deg); }
+    height:100%;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    user-select:none;
+
+    pointer-events:none;
+
 }
-    .character-placeholder::before{ /* brillo sutil sobre el placeholder */
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,.10), transparent 35%),
-        radial-gradient(circle at 70% 80%, rgba(0,0,0,.10), transparent 45%);
-      pointer-events:none;
-    }
-    .character-placeholder span{
-      position:relative;
-      z-index:2;
-      padding:0 25px;
-      color:rgba(255,255,255,.96);
-      font-size:clamp(16px,1.8vw,28px);
-      font-weight:800;
-      text-align:center;
-      letter-spacing:.07em;
-    }
 
     .barcode-block{ margin-top:40px; }
     .barcode{
