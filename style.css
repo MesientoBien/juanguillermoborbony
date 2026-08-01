@@ -390,15 +390,54 @@
     }
 
     .character-placeholder{
-      position:relative;
-      width:100%;
-      aspect-ratio:.88;
-      border-radius:clamp(24px,2.4vw,42px);
-      background:var(--green);
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-    }
+  position:relative;
+  width:100%;
+  aspect-ratio:.88;
+  border-radius:clamp(24px,2.4vw,42px);
+  background:#20c866;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  transform-origin:center center;
+  animation:characterCycle 2s ease-in-out infinite;
+}
+@keyframes characterCycle{
+  /* COLOR 1 */
+  0%, 24.9%{
+    background:#20c866;
+    transform:rotate(0deg);
+  }
+  3%{ transform:rotate(-2deg); }
+  6%{ transform:rotate(2deg); }
+  9%{ transform:rotate(0deg); }
+
+  /* COLOR 2 */
+  25%, 49.9%{
+    background:#4ea8ff;
+    transform:rotate(0deg);
+  }
+  28%{ transform:rotate(-2deg); }
+  31%{ transform:rotate(2deg); }
+  34%{ transform:rotate(0deg); }
+
+  /* COLOR 3 */
+  50%, 74.9%{
+    background:#ff7a00;
+    transform:rotate(0deg);
+  }
+  53%{ transform:rotate(-2deg); }
+  56%{ transform:rotate(2deg); }
+  59%{ transform:rotate(0deg); }
+
+  /* COLOR 4 */
+  75%, 100%{
+    background:#b36bff;
+    transform:rotate(0deg);
+  }
+  78%{ transform:rotate(-2deg); }
+  81%{ transform:rotate(2deg); }
+  84%{ transform:rotate(0deg); }
+}
     .character-placeholder::before{ /* brillo sutil sobre el placeholder */
       content:"";
       position:absolute;
